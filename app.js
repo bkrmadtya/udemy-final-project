@@ -24,10 +24,11 @@ var commentRoutes = require("./routes/comments"),
     
 
 
+// console.log(process.env.DATABASEURL);
 
-
-mongoose.connect(process.env.DATABASEURL); //create yelpcamp db inside mongodb
-// mongoose.connect("mongodb://bkrmadtya:1MusicalrhyM@ds127604.mlab.com:27604/webdevyelpcamp", {useNewUrlParser: true});
+// mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true}); //create yelpcamp db inside mongodb
+mongoose.connect("mongodb://bkrmadtya:1MusicalrhyM@ds127604.mlab.com:27604/webdevyelpcamp", {useNewUrlParser: true});
+// process.env.databaseURL("mongodb://localhost:27017/yelp_camp_v13");
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
